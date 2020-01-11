@@ -932,7 +932,7 @@ def update_subject_interests(user_id, subject_interests):
     _save_user_settings(user_settings)
 
 
-def _update_first_contribution_msec(user_id, first_contribution_msec):
+def update_first_contribution_msec(user_id, first_contribution_msec):
     """Updates first_contribution_msec of user with given user_id.
 
     Args:
@@ -956,7 +956,7 @@ def update_first_contribution_msec_if_not_set(user_id, first_contribution_msec):
     """
     user_settings = get_user_settings(user_id, strict=True)
     if user_settings.first_contribution_msec is None:
-        _update_first_contribution_msec(
+        update_first_contribution_msec(
             user_id, first_contribution_msec)
 
 
